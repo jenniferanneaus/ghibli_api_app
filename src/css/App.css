@@ -1,0 +1,147 @@
+/* ==============
+General 
+===============*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: rgb(31, 38, 66);
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  color: rgb(230, 232, 240);
+}
+
+/* ==============
+Typography
+===============*/
+
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.title p {
+  letter-spacing: 1px;
+}
+
+em {
+  font-style: normal;
+  color: rgb(0, 102, 170);
+}
+
+.btn {
+  font-weight: 800;
+  font-size: 1.125rem;
+  font-family: 'Raleway', sans-serif;
+}
+
+/* ==============
+Layout
+===============*/
+
+header {
+  background: rgb(37, 35, 29);
+  background-image: url("../img/so-white.png");
+  background-blend-mode: difference;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 2.5rem 0;
+  color: rgb(52, 64, 71);
+}
+
+.title {
+  margin-left: 3.5rem;
+  line-height: 0.6rem;
+  text-align: center;
+}
+
+.nav-list {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  align-items: center;
+}
+
+.btn {
+  color: rgb(32, 38, 59);
+  text-decoration: none;
+  margin-right: 2em;
+  padding: 10px;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.btn:hover,
+.btn:focus {
+  padding-bottom: 7px;
+  border-bottom: 3px solid rgb(32, 38, 59);
+}
+
+/* ==============
+Cards
+===============*/
+
+.flexbox-info-components {
+  margin: 2rem auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  max-width: 1300px;
+}
+
+/* ==============
+Media queries
+=============== */
+
+@media (max-width: 900px) {
+
+  .title {
+    width: 18em;
+    line-height: 1;
+  }
+
+  .title h1 {
+    margin-bottom: 0;
+  }  
+
+  .title p {
+    margin-top: 0.5rem;
+  }
+
+  header {
+    padding: 0.5rem 0;
+  }
+  
+}
+
+@media (max-width: 760px) {
+
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .title {
+    margin: 0;
+  }
+
+  .link-nav {
+    margin: 0 1em;
+  }
+
+}
+
+
+
+
+

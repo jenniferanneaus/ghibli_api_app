@@ -1,0 +1,68 @@
+
+/* ==============
+General
+===============*/
+* {
+    box-sizing: border-box;
+}
+
+/* ==============
+Typography
+===============*/
+
+.card-heading {
+    color: rgba(48, 26, 9, 0.6);
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.card-info {
+    line-height: 1.6;
+    color: rgb(2, 15, 22);
+}
+ 
+/* ==============
+Layout
+===============*/
+
+.card {
+    width: 90vw;
+    margin: 1.75em 0;
+    border-radius: 45px 10px;
+    border: solid 1px rgba(2, 9, 31, 0.7);
+    background: rgb(242, 244, 248);
+    overflow: hidden;
+}
+
+.card-heading {
+    background-image: linear-gradient(130deg, #7ecaad, #5f7ead 35%, rgb(123, 112, 165) 60%, #c4a0c7 99%);
+    background-color: rgb(71, 83, 107);
+    background-blend-mode: multiply;
+    padding: 0.25em 2em;
+    color: white;
+}
+
+.card-info {
+    padding: 0.25em 2em;
+}
+
+/* ==============
+Media queries
+===============*/
+
+@media (min-width: 700px) {
+
+    .card {
+        width: 40vw;
+    }
+    
+}
+
+@media (min-width: 1100px) {
+
+    .card {
+        width: 25vw;
+        max-width: 370px;
+    }
+
+}

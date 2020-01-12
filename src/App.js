@@ -17,6 +17,7 @@ class App extends React.Component {
     this.baseURL = "https://ghibliapi.herokuapp.com/"
     this.getData = this.getData.bind(this)
     this.homePage = this.homePage.bind(this)
+    this.displayError = this.displayError.bind(this)
   }
 
   homePage() {
@@ -32,7 +33,13 @@ class App extends React.Component {
     let infComponents = []
     let url = this.baseURL + cat
     fetch(url)
-    .then(response => response.json())
+    .then((response) => {
+      if (!response.ok)
+      {
+        throw new Error('Network response was not ok')
+      }
+      return response.json()
+    })
     .then(result => {
       this.setState({
         data: result,
@@ -47,7 +54,8 @@ class App extends React.Component {
           infComponents = this.createFilmComponents()
           break;
         default:
-          infComponents = this.createErrorMessage()
+          infComponents = [<div>Sorry, an error occurred.</div>]
+          break;
       }
       this.setState({
         infoComponents: infComponents,
@@ -56,6 +64,7 @@ class App extends React.Component {
     })
     .catch( err => {
       console.log(err)
+      this.displayError()
     })
   }
 
@@ -91,10 +100,13 @@ class App extends React.Component {
     return filmComponents
   }
 
-  createErrorMessage()
+  displayError()
   {
-    let err = [<div>Sorry, there was an error with that request</div>]
-    return err
+    let err = [<div>Sorry, an error occurred and the data was not retrieved successfully.</div>]
+    this.setState({
+      infoComponents: err,
+      loading: false
+    })
   }
 
   render() {

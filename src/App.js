@@ -14,7 +14,7 @@ class App extends React.Component {
       data: {},
       infoComponents: [<Welcome />]
     }
-    this.baseURL = "https://ghibliapi.herokuapp.com/"
+    this.baseURL = "https://ghibliapi.vercel.app/"
     this.getData = this.getData.bind(this)
     this.homePage = this.homePage.bind(this)
     this.displayError = this.displayError.bind(this)

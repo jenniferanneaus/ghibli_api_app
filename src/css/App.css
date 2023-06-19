@@ -8,10 +8,10 @@ General
 
 body {
   margin: 0;
-  background: rgb(31, 38, 66);
+  background: rgb(205, 205, 214);
   font-family: 'Raleway', sans-serif;
   font-weight: 400;
-  color: rgb(230, 232, 240);
+  color: rgb(28, 28, 29);
 }
 
 /* ==============
@@ -30,6 +30,14 @@ h1 {
 
 em {
   font-style: normal;
+  color: rgb(0, 102, 170);
+}
+
+.link-inline {
+  color: rgb(0, 102, 170);
+}
+
+.link-inline:visited {
   color: rgb(0, 102, 170);
 }
 
